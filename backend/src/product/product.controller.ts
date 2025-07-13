@@ -35,7 +35,8 @@ export class ProductController {
     }),
   )
   async create(@UploadedFile() file: Express.Multer.File, @Body() body: any) {
-    const imagePath = `http://localhost:4000/uploads/${file.filename}`;
+    // const imagePath = `http://localhost:4000/uploads/${file.filename}`;
+    const imagePath = `${process.env.BACKEND_URL}/uploads/${file.filename}`;
     return this.productService.create({ ...body, image: imagePath });
   }
 
@@ -68,7 +69,8 @@ async update(
 
   // Optional: only include image if a new one was uploaded
   if (file) {
-    updateData.image = `http://localhost:4000/uploads/${file.filename}`;
+    // updateData.image = `http://localhost:4000/uploads/${file.filename}`;
+    const imagePath = `${process.env.BACKEND_URL}/uploads/${file.filename}`;
   }
 
   return this.productService.update(+id, updateData);
