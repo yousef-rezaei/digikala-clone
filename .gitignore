@@ -1,0 +1,30 @@
+# ✅ General
+node_modules/
+dist/
+.env
+.env.local
+*.log
+*.lock
+.DS_Store
+
+# ✅ React (frontend)
+frontend/build/
+frontend/node_modules/
+frontend/.env
+frontend/.DS_Store
+
+# ✅ NestJS (backend)
+backend/node_modules/
+backend/dist/
+backend/.env
+backend/.DS_Store
+
+# ✅ OS / Editor files
+*.swp
+*.swo
+*.swn
+*.swn~
+*.tmp
+*.bak
+.idea/
+.vscode/
