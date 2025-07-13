@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import ProductCard from './ProductCard';
 import ProductForm from './ProductForm';
-import DeleteButton from './DeleteButton';
 import { getAllProducts, deleteProduct } from '../api/products';
 import '../App.css';
 

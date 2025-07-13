@@ -25,7 +25,7 @@ useEffect(() => {
   });
 
   setPreview(initialData.image || '');
-}, [initialData.id]);
+}, [initialData.name, initialData.price, initialData.description, initialData.image]);
 
   const handleChange = (e) => {
     const { name, value, files } = e.target;
